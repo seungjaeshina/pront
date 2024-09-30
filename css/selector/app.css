@@ -1,0 +1,31 @@
+/* * {
+  background-color: aquamarine;
+} */
+
+body {
+  background-color: #f1f1f1;
+}
+button {
+  font-size: 30px;
+  background-color: blanchedalmond;
+}
+
+h1,
+h2 {
+  color: #286c4a;
+}
+
+#signup {
+  background-color: coral;
+  color: #f1faee;
+}
+
+span {
+  color: #457b9d;
+}
+
+.tag {
+  background-color: magenta;
+  color: #f1faee;
+  font-size: 16px;
+}

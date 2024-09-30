@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Forms Demo</h1>
+    <form action="/tacos">
+      <p>
+      <label for="userId">아이디: </label>
+      <input type="text" placeholder="userId" name="userId" />
+    </p>
+    <p></p>
+    <label for="password">비밀번호: </label>
+      <input type="password" placeholder="password" name="password" />
+    </p>
+    <p>
+      <label for="checkColor">색상 선택</label>
+      <input type="color" placeholder="checkColor" name="checkColor" />
+    </p>
+    <p>
+      <label for="number">번호 선택</label>
+      <input type="number" placeholder="number" name="number" />
+    </p>
+    <p>
+    <label for="checkToday">날짜 선택</label>
+      <input type="time" placeholder="checkToday" name="checkToday" />
+    </p>
+    <button>로그인</button>
+    </form>
+    <form action="https://search.naver.com/search.naver?query">
+      <input type="text" name="query">
+      <button>search Naver</button>
+    </form>
+    <form action="https://www.google.com/search?q">
+      <input type="text" name="query">
+      <button>search Google</button>
+    </form>
+    <form action="https://www.youtube.com/results?search_query">
+      <input type="text" name="query">
+      <button>search Youtube</button>
+    </form>
+    
+    <h2>체크박스</h2>
+    <form action="/birds">
+      <input type="checkbox" name="agree_check" id="agree" checked>
+      <label for="agree">정보제공의 동의하십니까?</label>
+      <p>
+        <input type="radio" name="size" id="XS" value="XS">
+        <label for="XS">XS</label>
+        <input type="radio" name="size" id="S" value="S">
+        <label for="S">S</label>
+        <input type="radio" name="size" id="M" value="M">
+        <label for="M">M</label>
+      </p>
+      <button>확인</button>
+    </form>
+  </body>
+</html>
