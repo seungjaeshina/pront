@@ -133,3 +133,54 @@ console.log(str8.toLowerCase());    // "JavaScript"
  * 문자열 앞뒤 공백 문자 제거 후 반환 */
 const str9 = '    JavaScript      ';
 console.log(str9.trim());             // "JavaScript"
+
+
+/** Stromg.prototype.repeat
+ * 전달받은 정수만큼 반복해 연결한 새로운 문자열을 반환 */
+const str10 = 'JavaScript';
+console.log(str10.repeat());      // ""
+console.log(str10.repeat(0));     // ""
+console.log(str10.repeat(1));     // "JavaScript"
+console.log(str10.repeat(2));     // "JavaScriptJavaScript"
+console.log(str10.repeat(2, 5));  // "JavaScriptJavaScript"
+
+// 음수는 에러
+// console.log(str10.repeat(-1));  // RangeError: Invalid count value
+
+
+/** String.prototype.replace
+ * 첫번째 인수를 전달 받은 문자열 또는 정규표현식을 검색하여 두번째 인수로 전달한 문자열을 치환한 문자열 반환 */
+const str11 = 'JavaScript';                   // JavaScript
+console.log(str11.replace('java', 'Type'));   // JavaScript
+// 검색 된 문자열이 여럿 존재할 경우 첫번째 검색된 문자열만 치환
+console.log(str11.replace('a', 'b'));
+// 첫번째 인수로 정규표현식 전달
+console.log(str11.replace(/j/i, 'z'));        // zavaScript
+
+
+/** String.prototype.split
+ * 첫번째 인수로 전달한 문자열 또는 정규식을 검색하여 문자열을 구분한 후 분리 된 각 문자열로 이루어진 배열 반환 */
+const str12 = 'Hello, Everyone! Nice to see you again.';
+
+/* 공백을 구분하여 배열로 반환 */
+console.log(str12.split(' '));    // [ 'Hello,', 'Everyone!', 'Nice', 'to', 'see', 'you', 'again.' ]
+
+/* 인수로 빈 문자열을 전달하면 각 문자를 모두 분리 */
+console.log(str12.split(''));
+/* 
+[
+  'H', 'e', 'l', 'l', 'o', ',', ' ',
+  'E', 'v', 'e', 'r', 'y', 'o', 'n',
+  'e', '!', ' ', 'N', 'i', 'c', 'e',
+  ' ', 't', 'o', ' ', 's', 'e', 'e',
+  ' ', 'y', 'o', 'u', ' ', 'a', 'g',
+  'a', 'i', 'n', '.'
+]
+*/
+
+
+/* 인수를 생략하면 문자열 전체를 단일 요소로 하는 배열 반환 */
+console.log(str12.split());         // [ 'Hello, Everyone! Nice to see you again.' ]
+
+/* 두번째 인수로 배열의 길이 지정 */
+console.log(str12.split(' ', 5));   // [ 'Hello,', 'Everyone!', 'Nice', 'to', 'see' ]
